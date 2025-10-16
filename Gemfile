@@ -65,3 +65,6 @@ group :test do
   gem "guard"
   gem "guard-minitest"
 end
+
+gem "dartsass-rails", "~> 0.5.1"
+gem "bootstrap", "~> 5.3"
