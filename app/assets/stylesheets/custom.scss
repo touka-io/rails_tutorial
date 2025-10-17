@@ -2,6 +2,13 @@ $gray: #999;
 $gray-light: #ccc;
 $gray-darker: #666;
 $gray-medium-light: #eaeaea;
+$state-danger-text: #ea4444;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 /* universal */
 
@@ -75,5 +82,31 @@ footer {
       float: left;
       margin-left: 15px;
     }
+  }
+}
+
+/* forms */
+input, textarea {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+.field_with_errors {
+  // @extend .has-error;
+  .form-control {
+    border-color: $state-danger-text;
+    color: $state-danger-text;
   }
 }
