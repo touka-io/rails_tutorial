@@ -71,3 +71,7 @@ gem "dartsass-rails", "~> 0.5.1"
 gem "bootstrap", "~> 5.3"
 
 gem "bcrypt", "~> 3.1"
+
+group :production do
+  gem "pg"
+end
