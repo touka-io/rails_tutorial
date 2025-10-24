@@ -71,6 +71,9 @@ gem "dartsass-rails", "~> 0.5.1"
 gem "bootstrap", "~> 5.3"
 
 gem "bcrypt", "~> 3.1"
+gem "faker", "~> 3.5"
+gem "will_paginate", "~> 4.0"
+gem "will_paginate-bootstrap-style", "~> 0.3.0"
 
 group :production do
   gem "pg"
