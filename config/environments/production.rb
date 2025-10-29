@@ -57,19 +57,20 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
-  host = "https://rails-tutorial-8zqt.onrender.com"
-
   # Set host to be used by links generated in mailer templates.
-  config.action_mailer.default_url_options = { host: host }
+  config.action_mailer.default_url_options = {
+    host: "rails-tutorial-8zqt.onrender.com",
+    protocol: "https"
+  }
 
   # Specify outgoing SMTP server. Remember to add smtp/* credentials via rails credentials:edit.
   config.action_mailer.smtp_settings = {
     user_name: Rails.application.credentials.dig(:smtp, :user_name),
     password: Rails.application.credentials.dig(:smtp, :password),
     address: "smtp.mailgun.org",
-    port: 587,
+    port: 2525,
     authentication: :plain,
-    domain: host
+    domain: "sandboxf161a06c3d2d48af95b69b71f3606a60.mailgun.org"
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
