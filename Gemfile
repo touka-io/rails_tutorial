@@ -79,4 +79,5 @@ gem "image_processing", "~> 1.14"
 
 group :production do
   gem "pg"
+  gem "aws-sdk-s3"
 end
