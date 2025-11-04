@@ -6,3 +6,4 @@ import "bootstrap"
 
 import "controllers"
 import "custom/menu"
+import "custom/image_upload"

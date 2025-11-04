@@ -74,6 +74,8 @@ gem "bcrypt", "~> 3.1"
 gem "faker", "~> 3.5"
 gem "will_paginate", "~> 4.0"
 gem "will_paginate-bootstrap-style", "~> 0.3.0"
+gem "active_storage_validations", "~> 3.0"
+gem "image_processing", "~> 1.14"
 
 group :production do
   gem "pg"
