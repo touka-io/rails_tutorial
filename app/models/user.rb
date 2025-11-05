@@ -75,10 +75,9 @@ class User < ApplicationRecord
   end
 
   def feed
-    following_ids = "select followed_id from relationships
-                     where follower_id = :user_id"
-    Micropost.where("user_id in (#{following_ids})
-                    or user_id = :user_id", user_id: id)
+    part_of_feed = "relationships.follower_id = :id or microposts.user_id = :id"
+    Micropost.left_outer_joins(user: :followers)
+             .where(part_of_feed, id: id).distinct
              .includes(:user, image_attachment: :blob)
   end
 
